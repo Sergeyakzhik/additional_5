@@ -15,34 +15,6 @@ module.exports = function check(str, bracketsConfig) {
     }
 
     for (var i = 0; i < stri.length; i++) {
-
-       /* if (o.indexOf(stri[i]) >= 0 && c.indexOf(stri[i]) == -1 && stri[i+1] == null){
-            return false;
-        }
-        if ((o.indexOf(stri[i]) === c.indexOf(stri[i + 1])) && o.indexOf(stri[i]) != -1 && nO == 0) {
-            i++;
-            continue;
-        }
-        if (c.indexOf(stri[i]) >= 0 && o.indexOf(stri[i]) == -1 && nO === 0) {
-            return false;
-            break;
-        }
-        if (o.indexOf(stri[i]) >= 0) {
-            if(!(buf.indexOf(stri[i]) != -1 && buf.indexOf(stri[i-1]) != -1 && str[i] == str[i-1])) {
-                nO++;
-                continue;
-            }
-        }
-        if (c.indexOf(stri[i]) >= 0 || (buf.indexOf(stri[i]) != -1 && buf.indexOf(stri[i-1]) != -1 && str[i] == str[i-1])) {
-            for (var j = 0; j < nO; j++) {
-                if (c.indexOf(stri[i + j]) === -1 || c.indexOf(stri[i+j]) != o.indexOf(stri[i-1-j])) {
-                    return false;
-                    break;
-                }
-            }
-            i += (nO - 1);
-            nO = 0;
-        }*/
         if(buf.indexOf(stri[i]) != -1){
             co++;
             if((co + 2) % 2 != 0 && stri[i-1] != stri[i]){
@@ -81,7 +53,3 @@ module.exports = function check(str, bracketsConfig) {
 
     return cnt == 0 ? true : false;
 }
-
-
-
-
